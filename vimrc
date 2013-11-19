@@ -95,33 +95,6 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Normal mode: <Leader>t
 map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" Unimpaired configuration
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-nmap <C-p> :bp<CR> " Previous buffer
-nmap <C-n> :bn<CR> " Next buffer
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
-" Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
-
-" gist-vim defaults
-if has("mac")
-  let g:gist_clip_command = 'pbcopy'
-elseif has("unix")
-  let g:gist_clip_command = 'xclip -selection clipboard'
-endif
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
 " Use modeline overrides
 set modeline
 set modelines=10
@@ -162,3 +135,6 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Default color scheme
 color desert
+
+" Load up pathogen / plugins
+call pathogen#infect()
