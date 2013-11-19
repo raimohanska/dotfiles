@@ -1,3 +1,9 @@
+let mapleader = ","
+let maplocalleader = "-"
+
+" Load up pathogen / plugins
+call pathogen#infect()
+
 set nocompatible
 
 set number
@@ -53,25 +59,11 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=72
-endfunction
-
-function s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Hammer<CR>
-endfunction
-
 " make uses real tabs
 au FileType make set noexpandtab
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
-
-" md, markdown, and mk are markdown and define buffer-local preview
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
@@ -127,14 +119,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nobackup
 set noswapfile
 
-let mapleader = ","
-let maplocalleader = "-"
-
 nnoremap <leader>rv :source $MYVIMRC<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Default color scheme
 color desert
-
-" Load up pathogen / plugins
-call pathogen#infect()
