@@ -1,4 +1,10 @@
-h
+#!/bin/bash
+
+echo "init and update git submodules"
+
+git submodule init
+git submodule update
+
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
@@ -24,8 +30,9 @@ echo "...done"
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv -n ~/.$file ~/dotfiles_old/
+    rm ~/.$file
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    ln -sf $dir/$file ~/.$file
 done
 
 mkdir ~/.vim/backup
