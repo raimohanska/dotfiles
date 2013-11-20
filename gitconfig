@@ -1,0 +1,44 @@
+[user]
+	name = Juha Paananen
+	email = juha.paananen@reaktor.fi
+[color]
+	ui = auto
+	diff = true
+[alias]
+        st = status
+        stp = status --porcelain
+        br = branch
+        ci = commit -v
+        cam = commit -am
+        co = checkout
+        df = diff
+        dfc = diff --cached
+        lg = log -p
+        vlog = log --graph --full-history --all --oneline --decorate=full
+        amend = commit -a --no-edit --amend
+        sfetch = svn fetch
+        srebase = svn rebase
+        spull = !git-svn fetch && git-svn rebase
+        spush = !git-svn dcommit
+        prev = !git log --oneline -n 1|cut -d ' ' -f 1
+        pp = !git pull&&git push
+        lolpush = !git stash && git pull --rebase && git push && git stash pop
+        lolpull = !git stash && git pull --rebase && git stash pop
+        r = !git l -15
+        l = "!. ~/.githelpers && pretty_git_log"
+        ra = !git r --all
+[pack]
+	threads = 0
+[diff]
+	renamelimit = 0
+[core]
+#	autocrlf=true
+#	eol=lf
+[branch]
+	autosetuprebase = always
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+[rerere]
+	enabled = 1
