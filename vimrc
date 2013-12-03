@@ -117,8 +117,13 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nobackup
 set noswapfile
 
+" edit/reload vimrc using ,ev ,rv
 nnoremap <leader>rv :source $MYVIMRC<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" cycle thru buffers using tab,shift-tab
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
 
 " Default color scheme
 color desert
