@@ -10,6 +10,8 @@
         br = branch
         ci = commit -v
         cam = commit -am
+        cim = commit -m
+        aa = add .
         co = checkout
         df = diff
         dfc = diff --cached
