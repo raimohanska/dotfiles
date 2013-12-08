@@ -125,5 +125,15 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
 
+" scroll up/down with ctrl-j, ctrl-k
+:nnoremap <C-J> <C-E>
+:nnoremap <C-K> <C-Y>
+
+" resize with ctrl-shift-j/k
+:nnoremap <C-S-J> :resize +1<cr>
+:nnoremap <C-S-K> :resize -1<cr>
+:nnoremap <C-S-H> :vertical resize -1<cr>
+:nnoremap <C-S-L> :vertical resize +1<cr>
+
 " Default color scheme
 color desert
