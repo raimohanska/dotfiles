@@ -129,11 +129,11 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <C-J> <C-E>
 :nnoremap <C-K> <C-Y>
 
-" resize with ctrl-shift-j/k
-:nnoremap <C-S-J> :resize +1<cr>
-:nnoremap <C-S-K> :resize -1<cr>
-:nnoremap <C-S-H> :vertical resize -1<cr>
-:nnoremap <C-S-L> :vertical resize +1<cr>
+" resize with shift+arrows
+:nnoremap <S-Down> :resize +1<cr>
+:nnoremap <S-Up> :resize -1<cr>
+:nnoremap <S-Left> :vertical resize -1<cr>
+:nnoremap <S-Right> :vertical resize +1<cr>
 
 " Default color scheme
 color desert
