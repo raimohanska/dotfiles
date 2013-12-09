@@ -8,6 +8,7 @@
         st = status
         stp = status --porcelain
         br = branch
+        pr = pull --rebase
         ci = commit -v
         cam = commit -am
         cim = commit -m
