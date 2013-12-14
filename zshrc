@@ -69,7 +69,6 @@ alias txtgrep='find . -name "*.txt"|xargs grep'
 alias sqlgrep='find . -name "*.sql"|xargs grep'
 export PATH=~/Library/Haskell/bin/:$PATH
 export PATH=~/.rvm/bin/:$PATH
-alias ghci="ghci -XQuasiQuotes"
 
 export M2=$M2_HOME/bin
 export PATH=$M2:$PATH
