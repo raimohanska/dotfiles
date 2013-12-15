@@ -137,3 +137,6 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Default color scheme
 color desert
+
+" No folding, plz
+set nofoldenable
