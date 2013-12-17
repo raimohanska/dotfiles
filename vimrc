@@ -138,5 +138,5 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " Default color scheme
 color desert
 
-" No folding, plz
-set nofoldenable
+" No folding in markdown, plz
+let g:vim_markdown_folding_disabled=1
