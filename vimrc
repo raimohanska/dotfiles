@@ -140,3 +140,6 @@ color desert
 
 " No folding in markdown, plz
 let g:vim_markdown_folding_disabled=1
+
+" ,a to select all
+:nnoremap <leader>a ggVG
