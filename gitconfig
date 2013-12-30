@@ -14,6 +14,7 @@
         cam = commit -am
         cim = commit -m
         aa = add .
+        ap = add -p
         co = checkout
         df = diff
         dfc = diff --cached
