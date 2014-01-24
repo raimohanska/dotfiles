@@ -83,6 +83,7 @@ export PATH=~/Library/Haskell/bin/:$PATH
 export PATH=~/.rvm/bin/:$PATH
 export PATH=$PATH:$ANT_HOME/bin
 export PATH=/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194/bin:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/jpaanane/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/jpaanane/.rvm/bin:/usr/local/share/npm/bin:/bin:/Users/jpaanane/.rvm/bin/:/Users/jpaanane/Library/Haskell/bin/:/opt/local/bin:/opt/local/sbin:/Users/jpaanane/reaktor/scripts:/usr/local/bin:$JAVA_HOME/bin:/usr/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/Cellar/android-sdk/r12/tools:$PATH
+export PATH=$PATH:/Users/juha/.cabal/bin
 
 # JPD stuffs
 export ANT_HOME=~/reaktor/elisa/jpd/devel/common/ant
