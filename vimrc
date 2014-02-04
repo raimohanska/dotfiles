@@ -144,6 +144,16 @@ let g:vim_markdown_folding_disabled=1
 " ,a to select all
 :nnoremap <leader>a ggVG
 
+" ctrl-r in visual mode to replace selected text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+" ,p to "set paste"
+:nnoremap <leader>p :set paste<cr>
+
+if has("statusline")
+ set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+endif
+
 " :Bs to search buffer by name, pick from list
 function! BufSel(pattern)
   let bufcount = bufnr("$")
