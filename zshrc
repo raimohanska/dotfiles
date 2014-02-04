@@ -91,3 +91,5 @@ export ANT_OPTS='-ea -Xmx1024m -XX:MaxPermSize=256m'
 alias ia='ant -Dproject.qualifier=-SNAPSHOT'
 alias eunetlocal="eunet;ia;eunetremove;ln -s $HOME/.ivy2/local-snapshot/jpd/eunet $HOME/.m2/repository/jpd"
 alias eunetremove="rm -rf $HOME/.m2/repository/jpd/eunet"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
