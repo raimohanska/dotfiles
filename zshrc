@@ -74,16 +74,35 @@ alias hours="javaws https://hours.reaktor.fi/download/app/Hours.jnlp"
 alias editrc="vim ~/.zshrc&&source ~/.zshrc"
 unsetopt correct_all
 
-# PATH
+# Java
 export REBEL_HOME=~/Dropbox/Tools/jrebel
 export M2=$M2_HOME/bin
-export PATH=$M2:$PATH
-export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=~/Library/Haskell/bin/:$PATH
-export PATH=~/.rvm/bin/:$PATH
+export PATH=$PATH:$M2
+export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:$ANT_HOME/bin
-export PATH=/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194/bin:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/jpaanane/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/jpaanane/.rvm/bin:/usr/local/share/npm/bin:/bin:/Users/jpaanane/.rvm/bin/:/Users/jpaanane/Library/Haskell/bin/:/opt/local/bin:/opt/local/sbin:/Users/jpaanane/reaktor/scripts:/usr/local/bin:$JAVA_HOME/bin:/usr/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/Cellar/android-sdk/r12/tools:$PATH
+# Haskell
 export PATH=$PATH:/Users/juha/.cabal/bin
+# Ruby
+export PATH=$PATH:~/.rvm/bin/
+export PATH=$PATH:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194/bin
+export PATH=$PATH:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194@global/bin
+export PATH=$PATH:/Users/jpaanane/.rvm/rubies/ruby-1.9.3-p194/bin
+export PATH=$PATH:/Users/jpaanane/.rvm/bin
+# NPM
+export PATH=$PATH:/usr/local/share/npm/bin
+# reaktor/script
+export PATH=$PATH:/Users/jpaanane/reaktor/script
+# X11
+export PATH=$PATH:/opt/X11/bin
+
+#Other path
+export PATH=$PATH:/bin
+export PATH=$PATH:/sbin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/opt/local/bin
+export PATH=$PATH:/opt/local/sbin
+export PATH=$PATH:/usr/local/bin
 
 # JPD stuffs
 export ANT_HOME=~/reaktor/elisa/jpd/devel/common/ant
