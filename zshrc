@@ -47,8 +47,6 @@ source $ZSH/oh-my-zsh.sh
 export JRE_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home
 export JAVA_HOME=$JRE_HOME
 
-
-
 alias gti=git
 alias g=git
 
@@ -74,14 +72,15 @@ alias hours="javaws https://hours.reaktor.fi/download/app/Hours.jnlp"
 alias editrc="vim ~/.zshrc&&source ~/.zshrc"
 unsetopt correct_all
 
+export PATH=
 # Java
 export REBEL_HOME=~/Dropbox/Tools/jrebel
 export M2=$M2_HOME/bin
 export PATH=$PATH:$M2
 export PATH=$PATH:$JAVA_HOME/bin
-export PATH=$PATH:$ANT_HOME/bin
 # Haskell
 export PATH=$PATH:/Users/juha/.cabal/bin
+export PATH=$PATH:/usr/local/Cellar/haskell-platform/2012.4.0.0/bin
 # Ruby
 export PATH=$PATH:~/.rvm/bin/
 export PATH=$PATH:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194/bin
@@ -95,18 +94,23 @@ export PATH=$PATH:/Users/jpaanane/reaktor/script
 # X11
 export PATH=$PATH:/opt/X11/bin
 
-#Other path
-export PATH=$PATH:/bin
-export PATH=$PATH:/sbin
+#General path
+export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:/usr/sbin
-export PATH=$PATH:/opt/local/bin
-export PATH=$PATH:/opt/local/sbin
-export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/bin
+export PATH=$PATH:/sbin
+
+#MacPorts (disabled)
+#export PATH=$PATH:/opt/local/bin
+#export PATH=$PATH:/opt/local/sbin
+#
 
 # JPD stuffs
 export ANT_HOME=~/reaktor/elisa/jpd/devel/common/ant
 export ANT_OPTS='-ea -Xmx1024m -XX:MaxPermSize=256m'
+export PATH=$PATH:$ANT_HOME/bin
+export PATH=$PATH:$ANT_HOME/bin
 alias ia='ant -Dproject.qualifier=-SNAPSHOT'
 alias eunetlocal="eunet;ia;eunetremove;ln -s $HOME/.ivy2/local-snapshot/jpd/eunet $HOME/.m2/repository/jpd"
 alias eunetremove="rm -rf $HOME/.m2/repository/jpd/eunet"
