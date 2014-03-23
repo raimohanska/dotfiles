@@ -13,7 +13,7 @@
         ci = commit -v
         cam = commit -am
         cim = commit -m
-        aa = add .
+        aa = !git add . && git add -u .
         ap = add -p
         co = checkout
         df = diff
