@@ -154,6 +154,11 @@ if has("statusline")
  set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
 endif
 
+set list!
+set listchars=nbsp:¬,tab:··,trail:·
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
 " :Bs to search buffer by name, pick from list
 function! BufSel(pattern)
   let bufcount = bufnr("$")
