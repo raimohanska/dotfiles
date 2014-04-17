@@ -48,6 +48,7 @@ alias chrometest="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 alias chrome="open -a Google\ Chrome"
 alias hours="javaws https://hours.reaktor.fi/download/app/Hours.jnlp"
 alias editrc="vim ~/.zshrc&&source ~/.zshrc"
+alias rssh="ssh -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 unsetopt correct_all
 
 export PATH=
@@ -94,3 +95,5 @@ alias eunetlocal="eunet;ia;eunetremove;ln -s $HOME/.ivy2/local-snapshot/jpd/eune
 alias eunetremove="rm -rf $HOME/.m2/repository/jpd/eunet"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source ~/.zshrc.local
