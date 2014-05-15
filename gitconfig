@@ -19,6 +19,7 @@
         df = diff
         dfc = diff --cached
         lg = log -p
+        b = bisect
         vlog = log --graph --full-history --all --oneline --decorate=full
         amend = commit -a --no-edit --amend
         sfetch = svn fetch
