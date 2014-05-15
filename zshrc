@@ -51,7 +51,12 @@ alias editrc="vim ~/.zshrc&&source ~/.zshrc"
 alias rssh="ssh -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 unsetopt correct_all
 
-export PATH=
+#General path
+export PATH=/usr/local/bin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/bin
+export PATH=$PATH:/sbin
 # Java
 export REBEL_HOME=~/Dropbox/Tools/jrebel
 export M2=$M2_HOME/bin
@@ -73,12 +78,6 @@ export PATH=$PATH:/Users/jpaanane/reaktor/script
 # X11
 export PATH=$PATH:/opt/X11/bin
 
-#General path
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:/usr/bin
-export PATH=$PATH:/usr/sbin
-export PATH=$PATH:/bin
-export PATH=$PATH:/sbin
 
 #MacPorts (disabled)
 #export PATH=$PATH:/opt/local/bin
