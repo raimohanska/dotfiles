@@ -49,6 +49,7 @@ alias chrome="open -a Google\ Chrome"
 alias hours="javaws https://hours.reaktor.fi/download/app/Hours.jnlp"
 alias editrc="vim ~/.zshrc&&source ~/.zshrc"
 alias rssh="ssh -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
+alias rscp="scp -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 unsetopt correct_all
 
 #General path
