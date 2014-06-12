@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-sleuth"]
 	path = vim/bundle/vim-sleuth
 	url = git://github.com/tpope/vim-sleuth.git
+[submodule "vim-scala"]
+	path = vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git

@@ -20,6 +20,7 @@ autoload -U zmv
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
 export JRE_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home
