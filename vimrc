@@ -191,3 +191,6 @@ command! -nargs=1 Bs :call BufSel("<args>")
 
 ::nnoremap <leader>bo :Bufonly<cr>
 :so ~/dotfiles/vim/BufOnly.vim
+
+set undofile
+set undodir=~/.vim/undodir
