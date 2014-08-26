@@ -14,6 +14,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 COMPLETION_WAITING_DOTS="true"
 alias reloadrc="source ~/.zshrc"
 alias commitrc="(cd ~/dotfiles && git commit -am minor_fix && git pull && git push)"
+alias rcstatus="(cd ~/dotfiles && git status)"
+alias rcdiff="(cd ~/dotfiles && git diff)"
 autoload -U zmv
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
