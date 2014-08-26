@@ -92,15 +92,6 @@ export PATH=$PATH:/opt/X11/bin
 #export PATH=$PATH:/opt/local/sbin
 #
 
-# JPD stuffs
-export ANT_HOME=~/reaktor/elisa/jpd/devel/common/ant
-export ANT_OPTS='-ea -Xmx1024m -XX:MaxPermSize=256m'
-export PATH=$PATH:$ANT_HOME/bin
-export PATH=$PATH:$ANT_HOME/bin
-alias ia='ant -Dproject.qualifier=-SNAPSHOT'
-alias eunetlocal="eunet;ia;eunetremove;ln -s $HOME/.ivy2/local-snapshot/jpd/eunet $HOME/.m2/repository/jpd"
-alias eunetremove="rm -rf $HOME/.m2/repository/jpd/eunet"
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 source ~/.zshrc.local
