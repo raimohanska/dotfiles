@@ -13,6 +13,7 @@ DISABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 COMPLETION_WAITING_DOTS="true"
 alias reloadrc="source ~/.zshrc"
+alias commitrc="(cd ~/dotfiles && git commit -am minor_fix && git pull && git push)"
 autoload -U zmv
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -98,3 +99,4 @@ source ~/.zshrc.local
 
 # use vim key bindings in command-line editor
 bindkey -v
+bindkey '^r' history-incremental-search-backward
