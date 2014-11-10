@@ -195,3 +195,10 @@ command! -nargs=1 Bs :call BufSel("<args>")
 " persistent undo
 set undofile
 set undodir=~/.vim/undodir
+
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$'
+  \ }
