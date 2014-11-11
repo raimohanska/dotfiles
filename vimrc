@@ -121,9 +121,9 @@ set noswapfile
 nnoremap <leader>rv :source $MYVIMRC<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
-" cycle thru tabs using tab,shift-tab
-:nnoremap <Tab> :tabn<CR>
-:nnoremap <S-Tab> :tabp<CR>
+" cycle thru buffers using tab,shift-tab
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
 
 " scroll up/down with ctrl-j, ctrl-k
 :nnoremap <C-J> <C-E>
