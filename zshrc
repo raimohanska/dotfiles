@@ -27,9 +27,6 @@ plugins=(git)
 DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
-export JRE_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home
-export JAVA_HOME=$JRE_HOME
-
 #Mad aliases
 
 alias gti=git
@@ -69,7 +66,13 @@ export PATH=$PATH:/usr/bin
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:/bin
 export PATH=$PATH:/sbin
+
+#Include local rc
+source ~/.zshrc.local
+
 # Java
+if [ -z "$JAVA_HOME" ]; then; export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home; fi
+export JRE_HOME=$JAVA_HOME
 export REBEL_HOME=~/Dropbox/Tools/jrebel
 export M2=$M2_HOME/bin
 export PATH=$PATH:$M2
@@ -98,7 +101,9 @@ export PATH=$PATH:/opt/X11/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-source ~/.zshrc.local
 
 # use emacs key bindings in command-line editor
 bindkey -e
+
+alias myip='ifconfig|grep inet|grep netmask|grep broadcast|cut -f 2 -d " "'
+alias sano='say -v Mikko'
