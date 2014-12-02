@@ -100,6 +100,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 source ~/.zshrc.local
 
-# use vim key bindings in command-line editor
-bindkey -v
-bindkey '^r' history-incremental-search-backward
+# use emacs key bindings in command-line editor
+bindkey -e
