@@ -150,6 +150,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " ,p to "set paste"
 :nnoremap <leader>p :set paste<cr>
 
+" toggle line numbers using C-n C-n
+:nmap <C-N><C-N> :set invnumber<CR>
+
 if has("statusline")
  set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
 endif
