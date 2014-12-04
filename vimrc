@@ -193,6 +193,7 @@ endfunction
 command! -nargs=1 Bs :call BufSel("<args>")
 
 ::nnoremap <leader>bo :Bufonly<cr>
+::nnoremap <leader>bc :bp<cr>bd #<cr>
 :so ~/dotfiles/vim/BufOnly.vim
 
 " persistent undo
