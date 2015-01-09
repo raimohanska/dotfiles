@@ -71,12 +71,14 @@ export PATH=$PATH:/sbin
 source ~/.zshrc.local
 
 # Java
-if [ -z "$JAVA_HOME" ]; then; export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_12.jdk/Contents/Home; fi
-export JRE_HOME=$JAVA_HOME
-export REBEL_HOME=~/Dropbox/Tools/jrebel
 export M2=$M2_HOME/bin
 export PATH=$PATH:$M2
-export PATH=$PATH:$JAVA_HOME/bin
+function setjdk() { if [ $# -ne 0 ];then export JAVA_HOME=`/usr/libexec/java_home -v $@`; fi; java -version; }
+alias use_java7='setjdk 1.7'
+alias use_java8='setjdk 1.8'
+alias mvn7='use_java7 mvn'
+alias mvn8='use_java8 mvn'
+use_java8
 # Haskell
 export PATH=$PATH:/Users/juha/.cabal/bin
 export PATH=$PATH:/usr/local/Cellar/haskell-platform/2012.4.0.0/bin
