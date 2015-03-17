@@ -62,6 +62,7 @@ alias editrc="vim ~/.zshrc&&source ~/.zshrc"
 alias rssh="ssh -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 alias rscp="scp -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 alias startmongo="mongod --fork --config /usr/local/etc/mongod.conf"
+alias mvndeps="mvn dependency:tree|less"
 
 #Zsh options
 
