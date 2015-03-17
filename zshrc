@@ -36,6 +36,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias gti=git
 alias g=git
+alias pp="git pp"
+alias st="git st"
+alias pow="git aa"
 
 alias jgrep='find . -name "*.java"|xargs grep'
 alias hgrep='find . -name "*.hs"|xargs grep'
