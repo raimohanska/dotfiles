@@ -13,9 +13,10 @@
         ci = commit -v
         cam = commit -am
         cim = commit -m
-        aa = !git add . && git add -u .
+        aa = add -A
         ap = add -p
         co = checkout
+        cp = cherry-pick
         df = diff
         dfc = diff --cached
         lg = log -p
