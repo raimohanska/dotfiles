@@ -1,11 +1,12 @@
 ## setup
 
 ```
-cd ~
-git clone git@github.com:raimohanska/dotfiles.git
-cd dotfiles
-./install
+cd && git clone git@github.com:raimohanska/dotfiles.git && cd dotfiles
 ```
+
+Optionally switch to the lightweight version using `git checkout lightweight`.
+
+Then install using `./install`.
 
 Then install `zsh` using `sudo apt-get install zsh` or similar.
 
