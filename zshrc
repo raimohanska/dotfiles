@@ -70,36 +70,8 @@ export PATH=$PATH:/sbin
 #Include local rc
 source ~/.zshrc.local
 
-# Java
-export M2=$M2_HOME/bin
-export PATH=$PATH:$M2
-function setjdk() { if [ $# -ne 0 ];then export JAVA_HOME=`/usr/libexec/java_home -v $@`; fi; java -version; }
-alias use_java7='setjdk 1.7'
-alias use_java8='setjdk 1.8'
-alias mvn7='use_java7 mvn'
-alias mvn8='use_java8 mvn'
-use_java8
-# Haskell
-export PATH=$PATH:/Users/juha/.cabal/bin
-export PATH=$PATH:/usr/local/Cellar/haskell-platform/2012.4.0.0/bin
-# Ruby
-export PATH=$PATH:~/.rvm/bin/
-export PATH=$PATH:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194/bin
-export PATH=$PATH:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194@global/bin
-export PATH=$PATH:/Users/jpaanane/.rvm/rubies/ruby-1.9.3-p194/bin
-export PATH=$PATH:/Users/jpaanane/.rvm/bin
 # NPM
 export PATH=$PATH:/usr/local/share/npm/bin
-# reaktor/script
-export PATH=$PATH:/Users/jpaanane/reaktor/script
-# X11
-export PATH=$PATH:/opt/X11/bin
-
-
-#MacPorts (disabled)
-#export PATH=$PATH:/opt/local/bin
-#export PATH=$PATH:/opt/local/sbin
-#
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
@@ -108,4 +80,3 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 bindkey -e
 
 alias myip='ifconfig|grep inet|grep netmask|grep broadcast|cut -f 2 -d " "'
-alias sano='say -v Mikko'
