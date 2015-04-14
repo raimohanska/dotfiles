@@ -87,7 +87,7 @@ alias use_java7='setjdk 1.7'
 alias use_java8='setjdk 1.8'
 alias mvn7='use_java7 mvn'
 alias mvn8='use_java8 mvn'
-use_java8
+use_java8 2> /dev/null
 # Haskell
 export PATH=$PATH:/Users/juha/.cabal/bin
 export PATH=$PATH:/usr/local/Cellar/haskell-platform/2012.4.0.0/bin
