@@ -59,6 +59,7 @@ alias httpserver='python -m SimpleHTTPServer'
 alias chrometest="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/tmp/chrometest2 --incognito --disable-web-security --disable-popup-blocking&"
 alias chrome="open -a Google\ Chrome"
 alias editrc="vim ~/.zshrc&&source ~/.zshrc"
+alias editlocalrc="vim ~/.zshrc.local&&source ~/.zshrc"
 alias rssh="ssh -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 alias rscp="scp -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 alias startmongo="mongod --fork --config /usr/local/etc/mongod.conf"
@@ -99,8 +100,8 @@ export PATH=$PATH:/Users/jpaanane/.rvm/rubies/ruby-1.9.3-p194/bin
 export PATH=$PATH:/Users/jpaanane/.rvm/bin
 # NPM
 export PATH=$PATH:/usr/local/share/npm/bin
-# reaktor/script
-export PATH=$PATH:/Users/jpaanane/reaktor/script
+# reaktor/scripts
+export PATH=$PATH:/Users/jpaanane/reaktor/scripts
 # X11
 export PATH=$PATH:/opt/X11/bin
 
