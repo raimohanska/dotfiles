@@ -208,3 +208,4 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 ::nnoremap <leader><space> :CtrlP<cr>
+set clipboard=unnamed
