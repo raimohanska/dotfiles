@@ -64,6 +64,7 @@ alias rssh="ssh -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 alias rscp="scp -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
 alias startmongo="mongod --fork --config /usr/local/etc/mongod.conf"
 alias mvndeps="mvn dependency:tree|less"
+alias scanssh="nmap -p 22 '192.168.1.*' 2>/dev/null|grep -b3 'open  ssh'|grep 'report for'|sed 's/.*Nmap scan report for //'|sort --uniq"
 
 #Zsh options
 

@@ -206,3 +206,5 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.git|node_modules)$',
   \ 'file': '\v\.(exe|so|dll)$'
   \ }
+
+::nnoremap <leader><space> :CtrlP<cr>
