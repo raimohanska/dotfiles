@@ -12,7 +12,7 @@ git submodule update
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh gitconfig ghci"
+files="ackrc bashrc vimrc vim zshrc oh-my-zsh gitconfig ghci"
 
 ##########
 
