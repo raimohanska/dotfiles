@@ -122,3 +122,6 @@ bindkey -e
 
 alias myip='ifconfig|grep inet|grep netmask|grep broadcast|cut -f 2 -d " "'
 alias sano='say -v Mikko'
+
+export NVM_DIR="/Users/juha/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
