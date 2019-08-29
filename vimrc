@@ -69,7 +69,11 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set f
 au BufNewFile,BufRead *.json set ft=javascript
 
 " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=120
+let g:pymode_python = 'python3'
+let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe']
+let g:pymode_options_max_line_length = 120
+let g:pymode_folding = 0
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -144,6 +148,9 @@ let g:vim_markdown_folding_disabled=1
 " ,a to select all
 :nnoremap <leader>a ggVG
 
+" ,w to toggle wrap
+:nnoremap <leader>w :set wrap!<cr>
+
 " ctrl-r in visual mode to replace selected text
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
@@ -208,4 +215,5 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 ::nnoremap <leader><space> :CtrlP<cr>
+" use system clipboard
 set clipboard=unnamed

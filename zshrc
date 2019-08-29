@@ -58,8 +58,7 @@ alias txtgrep='find . -name "*.txt"|xargs grep'
 alias sqlgrep='find . -name "*.sql"|xargs grep'
 
 alias httpserver='python -m SimpleHTTPServer'
-alias chrometest="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/tmp/chrometest2 --incognito --disable-web-security --disable-popup-blocking&"
-alias chrome="open -a Google\ Chrome"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias editrc="vim ~/.zshrc&&source ~/.zshrc"
 alias editlocalrc="vim ~/.zshrc.local&&source ~/.zshrc"
 alias rssh="ssh -o 'ProxyCommand ssh jpaanane@pk.reaktor.fi nc %h %p'"
@@ -91,7 +90,6 @@ alias use_java7='setjdk 1.7'
 alias use_java8='setjdk 1.8'
 alias mvn7='use_java7 mvn'
 alias mvn8='use_java8 mvn'
-use_java8 2> /dev/null
 # Haskell
 export PATH=$PATH:/Users/juha/.cabal/bin
 export PATH=$PATH:/usr/local/Cellar/haskell-platform/2012.4.0.0/bin
@@ -101,8 +99,6 @@ export PATH=$PATH:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194/bin
 export PATH=$PATH:/Users/jpaanane/.rvm/gems/ruby-1.9.3-p194@global/bin
 export PATH=$PATH:/Users/jpaanane/.rvm/rubies/ruby-1.9.3-p194/bin
 export PATH=$PATH:/Users/jpaanane/.rvm/bin
-# NPM
-export PATH=$PATH:/usr/local/share/npm/bin
 # reaktor/scripts
 export PATH=$PATH:/Users/jpaanane/reaktor/scripts
 # X11
@@ -123,5 +119,19 @@ bindkey -e
 alias myip='ifconfig|grep inet|grep netmask|grep broadcast|cut -f 2 -d " "'
 alias sano='say -v Mikko'
 
-export NVM_DIR="/Users/juha/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+alias fingrasp="sudo fing | grep -i rasp -B 1"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm use 11 > /dev/null
+
+fpath+=~/.zfunc
+
+# use vim as default editor
+export EDITOR=/usr/local/bin/vim
+
+# Source chtf
+if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
+    source "/usr/local/share/chtf/chtf.sh"
+fi
