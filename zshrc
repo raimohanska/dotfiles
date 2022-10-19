@@ -101,8 +101,12 @@ export PATH=$PATH:/Users/jpaanane/.rvm/rubies/ruby-1.9.3-p194/bin
 export PATH=$PATH:/Users/jpaanane/.rvm/bin
 # reaktor/scripts
 export PATH=$PATH:/Users/jpaanane/reaktor/scripts
+export PATH=$PATH:/Users/jpaanane/dotfiles/scripts
 # X11
 export PATH=$PATH:/opt/X11/bin
+# Rust
+export PATH=$PATH:~/.cargo/bin/
+
 
 
 #MacPorts (disabled)
@@ -122,9 +126,7 @@ alias sano='say -v Mikko'
 alias fingrasp="sudo fing | grep -i rasp -B 1"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm use 11 > /dev/null
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 
 fpath+=~/.zfunc
 
